@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24B8E1EA28A58C958313A05C /* Pods_HipaaHealthyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF02B1BFD65A4157AFD8EAF /* Pods_HipaaHealthyTests.framework */; };
 		464EDC2B1E3FF37D0043402B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464EDC2A1E3FF37D0043402B /* AppDelegate.swift */; };
 		464EDC2D1E3FF37D0043402B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464EDC2C1E3FF37D0043402B /* ViewController.swift */; };
 		464EDC301E3FF37D0043402B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464EDC2E1E3FF37D0043402B /* Main.storyboard */; };
@@ -14,6 +15,10 @@
 		464EDC351E3FF37D0043402B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464EDC331E3FF37D0043402B /* LaunchScreen.storyboard */; };
 		464EDC401E3FF37D0043402B /* HipaaHealthyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464EDC3F1E3FF37D0043402B /* HipaaHealthyTests.swift */; };
 		464EDC4B1E3FF37D0043402B /* HipaaHealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464EDC4A1E3FF37D0043402B /* HipaaHealthyUITests.swift */; };
+		4674A7891E3FFF91005A8BB4 /* NetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674A7881E3FFF91005A8BB4 /* NetService.swift */; };
+		4674A78E1E400039005A8BB4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674A78D1E400039005A8BB4 /* Request.swift */; };
+		D09125EB92072E2CFF515B34 /* Pods_HipaaHealthyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4064A507E78616614078C5BE /* Pods_HipaaHealthyUITests.framework */; };
+		E1D4CF679D1C374D5AB6117F /* Pods_HipaaHealthy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56E20C328CB15AE8E003F0A /* Pods_HipaaHealthy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		178698774D6D729252246B34 /* Pods-HipaaHealthyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipaaHealthyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HipaaHealthyTests/Pods-HipaaHealthyTests.release.xcconfig"; sourceTree = "<group>"; };
+		4064A507E78616614078C5BE /* Pods_HipaaHealthyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HipaaHealthyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		464EDC271E3FF37D0043402B /* HipaaHealthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HipaaHealthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		464EDC2A1E3FF37D0043402B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		464EDC2C1E3FF37D0043402B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,15 @@
 		464EDC461E3FF37D0043402B /* HipaaHealthyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HipaaHealthyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		464EDC4A1E3FF37D0043402B /* HipaaHealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipaaHealthyUITests.swift; sourceTree = "<group>"; };
 		464EDC4C1E3FF37D0043402B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4674A7881E3FFF91005A8BB4 /* NetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetService.swift; sourceTree = "<group>"; };
+		4674A78D1E400039005A8BB4 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		51CDA0E0ACCB0026E9BB65DB /* Pods-HipaaHealthy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipaaHealthy.release.xcconfig"; path = "Pods/Target Support Files/Pods-HipaaHealthy/Pods-HipaaHealthy.release.xcconfig"; sourceTree = "<group>"; };
+		75655273F13CDAEB25E73819 /* Pods-HipaaHealthyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipaaHealthyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HipaaHealthyUITests/Pods-HipaaHealthyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8A455CF00944353DE5E1147B /* Pods-HipaaHealthy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipaaHealthy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HipaaHealthy/Pods-HipaaHealthy.debug.xcconfig"; sourceTree = "<group>"; };
+		9CF02B1BFD65A4157AFD8EAF /* Pods_HipaaHealthyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HipaaHealthyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C56E20C328CB15AE8E003F0A /* Pods_HipaaHealthy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HipaaHealthy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7CC119E5A894F7795BA35D3 /* Pods-HipaaHealthyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipaaHealthyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HipaaHealthyTests/Pods-HipaaHealthyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E11E901E8B3AA7AD007D2505 /* Pods-HipaaHealthyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipaaHealthyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HipaaHealthyUITests/Pods-HipaaHealthyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D4CF679D1C374D5AB6117F /* Pods_HipaaHealthy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24B8E1EA28A58C958313A05C /* Pods_HipaaHealthyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +86,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09125EB92072E2CFF515B34 /* Pods_HipaaHealthyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32031F483767233057615D08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C56E20C328CB15AE8E003F0A /* Pods_HipaaHealthy.framework */,
+				9CF02B1BFD65A4157AFD8EAF /* Pods_HipaaHealthyTests.framework */,
+				4064A507E78616614078C5BE /* Pods_HipaaHealthyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		464EDC1E1E3FF37C0043402B = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +110,8 @@
 				464EDC3E1E3FF37D0043402B /* HipaaHealthyTests */,
 				464EDC491E3FF37D0043402B /* HipaaHealthyUITests */,
 				464EDC281E3FF37D0043402B /* Products */,
+				E8EB6241D73A87DA6AEDBC50 /* Pods */,
+				32031F483767233057615D08 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +129,10 @@
 			isa = PBXGroup;
 			children = (
 				464EDC2A1E3FF37D0043402B /* AppDelegate.swift */,
-				464EDC2C1E3FF37D0043402B /* ViewController.swift */,
-				464EDC2E1E3FF37D0043402B /* Main.storyboard */,
-				464EDC311E3FF37D0043402B /* Assets.xcassets */,
-				464EDC331E3FF37D0043402B /* LaunchScreen.storyboard */,
-				464EDC361E3FF37D0043402B /* Info.plist */,
+				4674A7821E3FF9C4005A8BB4 /* Model */,
+				4674A7811E3FF9BE005A8BB4 /* View */,
+				4674A77F1E3FF9AC005A8BB4 /* ViewModel */,
+				4674A78A1E400009005A8BB4 /* Supporting Files */,
 			);
 			path = HipaaHealthy;
 			sourceTree = "<group>";
@@ -125,6 +155,78 @@
 			path = HipaaHealthyUITests;
 			sourceTree = "<group>";
 		};
+		4674A77F1E3FF9AC005A8BB4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4674A7841E3FFA1A005A8BB4 /* Authentication */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		4674A7811E3FF9BE005A8BB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				464EDC2E1E3FF37D0043402B /* Main.storyboard */,
+				464EDC331E3FF37D0043402B /* LaunchScreen.storyboard */,
+				464EDC2C1E3FF37D0043402B /* ViewController.swift */,
+				4674A7831E3FFA0D005A8BB4 /* Authentication */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4674A7821E3FF9C4005A8BB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4674A7871E3FFF52005A8BB4 /* Networking */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4674A7831E3FFA0D005A8BB4 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		4674A7841E3FFA1A005A8BB4 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		4674A7871E3FFF52005A8BB4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4674A7881E3FFF91005A8BB4 /* NetService.swift */,
+				4674A78D1E400039005A8BB4 /* Request.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		4674A78A1E400009005A8BB4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				464EDC361E3FF37D0043402B /* Info.plist */,
+				464EDC311E3FF37D0043402B /* Assets.xcassets */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E8EB6241D73A87DA6AEDBC50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A455CF00944353DE5E1147B /* Pods-HipaaHealthy.debug.xcconfig */,
+				51CDA0E0ACCB0026E9BB65DB /* Pods-HipaaHealthy.release.xcconfig */,
+				D7CC119E5A894F7795BA35D3 /* Pods-HipaaHealthyTests.debug.xcconfig */,
+				178698774D6D729252246B34 /* Pods-HipaaHealthyTests.release.xcconfig */,
+				E11E901E8B3AA7AD007D2505 /* Pods-HipaaHealthyUITests.debug.xcconfig */,
+				75655273F13CDAEB25E73819 /* Pods-HipaaHealthyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 464EDC4F1E3FF37D0043402B /* Build configuration list for PBXNativeTarget "HipaaHealthy" */;
 			buildPhases = (
+				8D838262A36FFA065A1FB8F2 /* [CP] Check Pods Manifest.lock */,
 				464EDC231E3FF37C0043402B /* Sources */,
 				464EDC241E3FF37C0043402B /* Frameworks */,
 				464EDC251E3FF37C0043402B /* Resources */,
+				264B515C7AC1E477572D7B3B /* [CP] Embed Pods Frameworks */,
+				1EFC4968C55468B6D9E9CA31 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +254,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 464EDC521E3FF37D0043402B /* Build configuration list for PBXNativeTarget "HipaaHealthyTests" */;
 			buildPhases = (
+				1D1E4F7BB1CFCEBB5DE6B0E1 /* [CP] Check Pods Manifest.lock */,
 				464EDC371E3FF37D0043402B /* Sources */,
 				464EDC381E3FF37D0043402B /* Frameworks */,
 				464EDC391E3FF37D0043402B /* Resources */,
+				1577BB056BB150EEC62A0BF2 /* [CP] Embed Pods Frameworks */,
+				734A0440CF910E5625F1418A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +275,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 464EDC551E3FF37D0043402B /* Build configuration list for PBXNativeTarget "HipaaHealthyUITests" */;
 			buildPhases = (
+				7C18D32355870C703F7D3142 /* [CP] Check Pods Manifest.lock */,
 				464EDC421E3FF37D0043402B /* Sources */,
 				464EDC431E3FF37D0043402B /* Frameworks */,
 				464EDC441E3FF37D0043402B /* Resources */,
+				2FF98F6F65C8BF2E14127FAD /* [CP] Embed Pods Frameworks */,
+				F814846677D5F3F37746D12F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,7 +300,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = "Robert Sandru";
+				ORGANIZATIONNAME = HipaaHealthy;
 				TargetAttributes = {
 					464EDC261E3FF37C0043402B = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -257,13 +368,153 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1577BB056BB150EEC62A0BF2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HipaaHealthyTests/Pods-HipaaHealthyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D1E4F7BB1CFCEBB5DE6B0E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1EFC4968C55468B6D9E9CA31 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HipaaHealthy/Pods-HipaaHealthy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		264B515C7AC1E477572D7B3B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HipaaHealthy/Pods-HipaaHealthy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FF98F6F65C8BF2E14127FAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HipaaHealthyUITests/Pods-HipaaHealthyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		734A0440CF910E5625F1418A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HipaaHealthyTests/Pods-HipaaHealthyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C18D32355870C703F7D3142 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8D838262A36FFA065A1FB8F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F814846677D5F3F37746D12F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HipaaHealthyUITests/Pods-HipaaHealthyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		464EDC231E3FF37C0043402B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				464EDC2D1E3FF37D0043402B /* ViewController.swift in Sources */,
+				4674A78E1E400039005A8BB4 /* Request.swift in Sources */,
 				464EDC2B1E3FF37D0043402B /* AppDelegate.swift in Sources */,
+				4674A7891E3FFF91005A8BB4 /* NetService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +664,7 @@
 		};
 		464EDC501E3FF37D0043402B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A455CF00944353DE5E1147B /* Pods-HipaaHealthy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FZSAPS42SZ;
@@ -426,6 +678,7 @@
 		};
 		464EDC511E3FF37D0043402B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51CDA0E0ACCB0026E9BB65DB /* Pods-HipaaHealthy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FZSAPS42SZ;
@@ -439,6 +692,7 @@
 		};
 		464EDC531E3FF37D0043402B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7CC119E5A894F7795BA35D3 /* Pods-HipaaHealthyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,6 +708,7 @@
 		};
 		464EDC541E3FF37D0043402B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 178698774D6D729252246B34 /* Pods-HipaaHealthyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -469,6 +724,7 @@
 		};
 		464EDC561E3FF37D0043402B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E11E901E8B3AA7AD007D2505 /* Pods-HipaaHealthyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = FZSAPS42SZ;
@@ -483,6 +739,7 @@
 		};
 		464EDC571E3FF37D0043402B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75655273F13CDAEB25E73819 /* Pods-HipaaHealthyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = FZSAPS42SZ;
@@ -514,6 +771,7 @@
 				464EDC511E3FF37D0043402B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		464EDC521E3FF37D0043402B /* Build configuration list for PBXNativeTarget "HipaaHealthyTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +780,7 @@
 				464EDC541E3FF37D0043402B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		464EDC551E3FF37D0043402B /* Build configuration list for PBXNativeTarget "HipaaHealthyUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +789,7 @@
 				464EDC571E3FF37D0043402B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

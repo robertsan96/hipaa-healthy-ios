@@ -1,0 +1,6 @@
+framework module Pods_HipaaHealthyUITests {
+  umbrella header "Pods-HipaaHealthyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
