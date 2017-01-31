@@ -1,5 +1,5 @@
 //
-//  RoutingService.swift
+//  Routes.swift
 //  HipaaHealthy
 //
 //  Created by Robert Sandru on 1/31/17.
@@ -7,14 +7,11 @@
 //
 
 import Foundation
+import Alamofire
 
-class RoutingService {
+struct Routes {
     
-    init() {
-        print("Loaded routing service")
-    }
-    
-    func test() {
-        print("o da")
+    struct Authentication {
+        static let postLogin = Route(slug: "user/login/", httpMethod: .post)
     }
 }

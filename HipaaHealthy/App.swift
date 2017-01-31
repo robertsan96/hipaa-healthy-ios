@@ -11,9 +11,9 @@ import Foundation
 class App {
     
     static let shared: App = App()
-    let routingService: RoutingService
+    let routingCoordinator: RoutingCoordinator
     
     private init() {
-        self.routingService = RoutingService()
+        self.routingCoordinator = RoutingCoordinator()
     }
 }

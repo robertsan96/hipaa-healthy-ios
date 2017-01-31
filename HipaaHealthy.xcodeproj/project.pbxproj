@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24B8E1EA28A58C958313A05C /* Pods_HipaaHealthyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF02B1BFD65A4157AFD8EAF /* Pods_HipaaHealthyTests.framework */; };
+		4611800D1E40066600F4FCFC /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4611800C1E40066600F4FCFC /* Routes.swift */; };
 		464EDC2B1E3FF37D0043402B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464EDC2A1E3FF37D0043402B /* AppDelegate.swift */; };
 		464EDC2D1E3FF37D0043402B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464EDC2C1E3FF37D0043402B /* ViewController.swift */; };
 		464EDC301E3FF37D0043402B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464EDC2E1E3FF37D0043402B /* Main.storyboard */; };
@@ -18,7 +19,7 @@
 		4674A7891E3FFF91005A8BB4 /* NetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674A7881E3FFF91005A8BB4 /* NetService.swift */; };
 		4674A78E1E400039005A8BB4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674A78D1E400039005A8BB4 /* Request.swift */; };
 		4674A7901E400111005A8BB4 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674A78F1E400111005A8BB4 /* App.swift */; };
-		4674A7941E4002C4005A8BB4 /* RoutingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674A7931E4002C4005A8BB4 /* RoutingService.swift */; };
+		4674A7941E4002C4005A8BB4 /* RoutingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674A7931E4002C4005A8BB4 /* RoutingCoordinator.swift */; };
 		4674A7961E4002EC005A8BB4 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674A7951E4002EC005A8BB4 /* Route.swift */; };
 		D09125EB92072E2CFF515B34 /* Pods_HipaaHealthyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4064A507E78616614078C5BE /* Pods_HipaaHealthyUITests.framework */; };
 		E1D4CF679D1C374D5AB6117F /* Pods_HipaaHealthy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56E20C328CB15AE8E003F0A /* Pods_HipaaHealthy.framework */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		178698774D6D729252246B34 /* Pods-HipaaHealthyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipaaHealthyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HipaaHealthyTests/Pods-HipaaHealthyTests.release.xcconfig"; sourceTree = "<group>"; };
 		4064A507E78616614078C5BE /* Pods_HipaaHealthyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HipaaHealthyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4611800C1E40066600F4FCFC /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		464EDC271E3FF37D0043402B /* HipaaHealthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HipaaHealthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		464EDC2A1E3FF37D0043402B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		464EDC2C1E3FF37D0043402B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +62,7 @@
 		4674A7881E3FFF91005A8BB4 /* NetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetService.swift; sourceTree = "<group>"; };
 		4674A78D1E400039005A8BB4 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		4674A78F1E400111005A8BB4 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		4674A7931E4002C4005A8BB4 /* RoutingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingService.swift; sourceTree = "<group>"; };
+		4674A7931E4002C4005A8BB4 /* RoutingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingCoordinator.swift; sourceTree = "<group>"; };
 		4674A7951E4002EC005A8BB4 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		51CDA0E0ACCB0026E9BB65DB /* Pods-HipaaHealthy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipaaHealthy.release.xcconfig"; path = "Pods/Target Support Files/Pods-HipaaHealthy/Pods-HipaaHealthy.release.xcconfig"; sourceTree = "<group>"; };
 		75655273F13CDAEB25E73819 /* Pods-HipaaHealthyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipaaHealthyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HipaaHealthyUITests/Pods-HipaaHealthyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -233,7 +235,8 @@
 		4674A7921E4002AA005A8BB4 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
-				4674A7931E4002C4005A8BB4 /* RoutingService.swift */,
+				4674A7931E4002C4005A8BB4 /* RoutingCoordinator.swift */,
+				4611800C1E40066600F4FCFC /* Routes.swift */,
 				4674A7951E4002EC005A8BB4 /* Route.swift */,
 			);
 			name = Routing;
@@ -536,7 +539,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4674A7941E4002C4005A8BB4 /* RoutingService.swift in Sources */,
+				4674A7941E4002C4005A8BB4 /* RoutingCoordinator.swift in Sources */,
+				4611800D1E40066600F4FCFC /* Routes.swift in Sources */,
 				464EDC2D1E3FF37D0043402B /* ViewController.swift in Sources */,
 				4674A78E1E400039005A8BB4 /* Request.swift in Sources */,
 				464EDC2B1E3FF37D0043402B /* AppDelegate.swift in Sources */,
