@@ -10,7 +10,7 @@ target 'HipaaHealthy' do
   pod 'RxSwift',    '~> 3.0'
   pod 'RxCocoa',    '~> 3.0'
   pod 'Alamofire',  '~> 4.3'
-  pod 'SwiftyJSON'
+  pod 'AlamofireObjectMapper', '~> 4.0'
 
   target 'HipaaHealthyTests' do
     inherit! :search_paths

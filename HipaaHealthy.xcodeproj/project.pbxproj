@@ -21,6 +21,7 @@
 		4674A7901E400111005A8BB4 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674A78F1E400111005A8BB4 /* App.swift */; };
 		4674A7941E4002C4005A8BB4 /* RoutingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674A7931E4002C4005A8BB4 /* RoutingCoordinator.swift */; };
 		4674A7961E4002EC005A8BB4 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674A7951E4002EC005A8BB4 /* Route.swift */; };
+		469F5D1D1E40EB7100735C5A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469F5D1C1E40EB7100735C5A /* UserModel.swift */; };
 		D09125EB92072E2CFF515B34 /* Pods_HipaaHealthyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4064A507E78616614078C5BE /* Pods_HipaaHealthyUITests.framework */; };
 		E1D4CF679D1C374D5AB6117F /* Pods_HipaaHealthy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56E20C328CB15AE8E003F0A /* Pods_HipaaHealthy.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		4674A78F1E400111005A8BB4 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		4674A7931E4002C4005A8BB4 /* RoutingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingCoordinator.swift; sourceTree = "<group>"; };
 		4674A7951E4002EC005A8BB4 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		469F5D1C1E40EB7100735C5A /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		51CDA0E0ACCB0026E9BB65DB /* Pods-HipaaHealthy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipaaHealthy.release.xcconfig"; path = "Pods/Target Support Files/Pods-HipaaHealthy/Pods-HipaaHealthy.release.xcconfig"; sourceTree = "<group>"; };
 		75655273F13CDAEB25E73819 /* Pods-HipaaHealthyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipaaHealthyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HipaaHealthyUITests/Pods-HipaaHealthyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8A455CF00944353DE5E1147B /* Pods-HipaaHealthy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipaaHealthy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HipaaHealthy/Pods-HipaaHealthy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 		4674A7821E3FF9C4005A8BB4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				469F5D1C1E40EB7100735C5A /* UserModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				464EDC2D1E3FF37D0043402B /* ViewController.swift in Sources */,
 				4674A78E1E400039005A8BB4 /* Request.swift in Sources */,
 				464EDC2B1E3FF37D0043402B /* AppDelegate.swift in Sources */,
+				469F5D1D1E40EB7100735C5A /* UserModel.swift in Sources */,
 				4674A7901E400111005A8BB4 /* App.swift in Sources */,
 				4674A7961E4002EC005A8BB4 /* Route.swift in Sources */,
 				4674A7891E3FFF91005A8BB4 /* NetService.swift in Sources */,

@@ -10,7 +10,7 @@ import Foundation
 
 class RoutingCoordinator {
     
-    let apiURL: String = "https://api.hipaahealthy.com/"
+    let apiURL: String = "https://api.hipaahealthy.com/api/"
     let apiVersion: String = "1.0"
     var baseURL: URL?
     

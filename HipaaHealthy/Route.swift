@@ -10,9 +10,15 @@ import Foundation
 import Alamofire
 
 class Route {
-    var slug: String
+    var slug: String?
     var httpMethod: HTTPMethod
     var url: URL?
+    
+    init(httpMethod: HTTPMethod) {
+        
+        self.httpMethod = httpMethod
+        self.url = self.buildURL()
+    }
     
     init(slug: String, httpMethod: HTTPMethod) {
         
@@ -26,14 +32,17 @@ class Route {
         if let baseURL = App.shared.routingCoordinator.baseURL {
             
             var builtURLString: String
-            builtURLString = baseURL.absoluteString + self.slug
+            if let slug = self.slug {
+                builtURLString = baseURL.absoluteString + slug
+            } else {
+                return baseURL
+            }
             
             return URL(string: builtURLString)
         } else {
             
             return nil
         }
-        
     }
     
 }

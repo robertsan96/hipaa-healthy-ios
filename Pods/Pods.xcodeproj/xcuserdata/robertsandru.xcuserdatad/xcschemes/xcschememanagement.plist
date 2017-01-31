@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AlamofireObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-HipaaHealthy.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -34,25 +44,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SwiftyJSON.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>030C705D6D5AD86B30EC2DD695CB2018</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>046F3364AC403F15EEE5B3DB332106CB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1CE919DB448EE67CA0C0F51CD077DCC2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7943FC87CA1E6E7CC58D6C10EAA46D90</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7E984D6BCFA8D91A7EEDF26D428942A0</key>
+		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9502FB01641FBABB78522037E882757B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A84BA87402463B32CDB31171485F4DAF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C1C00611E0AE3F540899DB29051A38BF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FC8C07E1FA2CCCF98837274BAB2EF2A2</key>
+		<key>D26EC907C62A7C338EC17A092FAB24C7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
