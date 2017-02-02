@@ -22,6 +22,9 @@
 		4674A7941E4002C4005A8BB4 /* RoutingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674A7931E4002C4005A8BB4 /* RoutingCoordinator.swift */; };
 		4674A7961E4002EC005A8BB4 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674A7951E4002EC005A8BB4 /* Route.swift */; };
 		4698F8911E43248A00F09A82 /* ResponseResultsUserPermissionUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698F8901E43248900F09A82 /* ResponseResultsUserPermissionUserModel.swift */; };
+		4698F8951E43489300F09A82 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698F8941E43489300F09A82 /* AuthenticationService.swift */; };
+		4698F8981E434B0D00F09A82 /* ResponseUserLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698F8971E434B0D00F09A82 /* ResponseUserLoginModel.swift */; };
+		4698F89A1E434C8500F09A82 /* CurrentUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698F8991E434C8500F09A82 /* CurrentUserModel.swift */; };
 		46996D791E40F4A000779076 /* ResponseResultsUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46996D781E40F4A000779076 /* ResponseResultsUserModel.swift */; };
 		469F5D1D1E40EB7100735C5A /* ResponseUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469F5D1C1E40EB7100735C5A /* ResponseUserModel.swift */; };
 		D09125EB92072E2CFF515B34 /* Pods_HipaaHealthyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4064A507E78616614078C5BE /* Pods_HipaaHealthyUITests.framework */; };
@@ -68,6 +71,9 @@
 		4674A7931E4002C4005A8BB4 /* RoutingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingCoordinator.swift; sourceTree = "<group>"; };
 		4674A7951E4002EC005A8BB4 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		4698F8901E43248900F09A82 /* ResponseResultsUserPermissionUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseResultsUserPermissionUserModel.swift; sourceTree = "<group>"; };
+		4698F8941E43489300F09A82 /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		4698F8971E434B0D00F09A82 /* ResponseUserLoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseUserLoginModel.swift; sourceTree = "<group>"; };
+		4698F8991E434C8500F09A82 /* CurrentUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserModel.swift; sourceTree = "<group>"; };
 		46996D781E40F4A000779076 /* ResponseResultsUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseResultsUserModel.swift; sourceTree = "<group>"; };
 		469F5D1C1E40EB7100735C5A /* ResponseUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseUserModel.swift; sourceTree = "<group>"; };
 		51CDA0E0ACCB0026E9BB65DB /* Pods-HipaaHealthy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipaaHealthy.release.xcconfig"; path = "Pods/Target Support Files/Pods-HipaaHealthy/Pods-HipaaHealthy.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				46996D771E40F40B00779076 /* ResponseModel */,
+				4698F8991E434C8500F09A82 /* CurrentUserModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -233,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				4674A78F1E400111005A8BB4 /* App.swift */,
+				4698F8921E43485600F09A82 /* Services */,
 				4674A7921E4002AA005A8BB4 /* Routing */,
 				4674A7871E3FFF52005A8BB4 /* Networking */,
 			);
@@ -249,9 +257,34 @@
 			name = Routing;
 			sourceTree = "<group>";
 		};
+		4698F8921E43485600F09A82 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4698F8931E43486B00F09A82 /* Authentication */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		4698F8931E43486B00F09A82 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				4698F8941E43489300F09A82 /* AuthenticationService.swift */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		4698F8961E434AF900F09A82 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				4698F8971E434B0D00F09A82 /* ResponseUserLoginModel.swift */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
 		46996D771E40F40B00779076 /* ResponseModel */ = {
 			isa = PBXGroup;
 			children = (
+				4698F8961E434AF900F09A82 /* Authentication */,
 				469F5D1C1E40EB7100735C5A /* ResponseUserModel.swift */,
 				46996D781E40F4A000779076 /* ResponseResultsUserModel.swift */,
 				4698F8901E43248900F09A82 /* ResponseResultsUserPermissionUserModel.swift */,
@@ -559,9 +592,12 @@
 				4674A7941E4002C4005A8BB4 /* RoutingCoordinator.swift in Sources */,
 				4611800D1E40066600F4FCFC /* Routes.swift in Sources */,
 				464EDC2D1E3FF37D0043402B /* ViewController.swift in Sources */,
+				4698F8951E43489300F09A82 /* AuthenticationService.swift in Sources */,
 				4698F8911E43248A00F09A82 /* ResponseResultsUserPermissionUserModel.swift in Sources */,
 				4674A78E1E400039005A8BB4 /* Request.swift in Sources */,
+				4698F89A1E434C8500F09A82 /* CurrentUserModel.swift in Sources */,
 				464EDC2B1E3FF37D0043402B /* AppDelegate.swift in Sources */,
+				4698F8981E434B0D00F09A82 /* ResponseUserLoginModel.swift in Sources */,
 				469F5D1D1E40EB7100735C5A /* ResponseUserModel.swift in Sources */,
 				4674A7901E400111005A8BB4 /* App.swift in Sources */,
 				4674A7961E4002EC005A8BB4 /* Route.swift in Sources */,

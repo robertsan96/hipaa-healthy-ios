@@ -16,16 +16,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let route = Routes.Authentication.getUser
-//        let params: [String: Any] = [
-//                "item": 121,
-//                "answer": "Testam answerul"
-//        ]
-        let request = Request(route: route, encoding: JSONEncoding.default, parameters: nil, headers: ["Content-Type": "Application/json", "Authorization": "Token 8ac1f93896bf0f7a3806320311a1b4d7e7945595"])
-        let netService = NetService(request: request)
-        netService.sendRequest(type: ResponseUserModel.self).asObservable().subscribe(onNext: { success in
-            print(success?.results?.firstName)
-        }).addDisposableTo(disposeBag)
+        let _ = AuthenticationService().login().subscribe(onNext: { result in
+            print(result)
+        })
     }
     
     override func didReceiveMemoryWarning() {
