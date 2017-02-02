@@ -9,10 +9,17 @@
 import Foundation
 import ObjectMapper
 
+enum responseUserModelState {
+    case initialState
+    case didGetUser
+    case didFail
+}
 class ResponseUserModel: Mappable {
     
     var internalCode: String?
     var results: ResponseResultsUserModel?
+    
+    var responseState: responseUserModelState = .initialState
     
     init() { }
     
@@ -24,7 +31,24 @@ class ResponseUserModel: Mappable {
         
         self.internalCode <- map["internal_code"]
         self.results <- map["results"]
+        self.updateResponseState()
     }
     
-
+    func updateResponseState() {
+        
+        if let internalCode = self.internalCode {
+            switch internalCode {
+            case "HHIC-006":
+                self.responseState = .didGetUser
+                break
+            default:
+                self.responseState = .didFail
+                break
+            }
+        } else {
+            self.responseState = .didFail
+        }
+    }
+    
+    
 }

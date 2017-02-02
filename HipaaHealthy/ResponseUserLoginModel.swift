@@ -9,10 +9,18 @@
 import Foundation
 import ObjectMapper
 
+enum responseUserLoginModelState {
+    case initialState
+    case didSetToken
+    case didFail
+}
+
 class ResponseUserLoginModel: Mappable {
     
     var internalCode: String?
     var token: String?
+    
+    var responseState: responseUserLoginModelState = .initialState
     
     required init?(map: Map) { }
     
@@ -20,6 +28,24 @@ class ResponseUserLoginModel: Mappable {
         
         self.internalCode <- map["internal_code"]
         self.token <- map["token"]
+        self.updateResponseState()
     }
     
+    func updateResponseState() {
+        
+        if let internalCode = self.internalCode {
+            
+            switch internalCode {
+            case "HHIC-009":
+                self.responseState = .didSetToken
+                break
+            default:
+                self.responseState = .didFail
+                break
+            }
+        } else {
+
+            self.responseState = .didFail
+        }
+    }
 }

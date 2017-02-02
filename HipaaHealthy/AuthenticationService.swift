@@ -14,33 +14,38 @@ class AuthenticationService {
     
     init() { }
     
-    func login() -> Observable<Bool> {
+    func login(params: [String: Any]) -> Observable<Bool> {
         
         return Observable.create { o in
             
             let route = Routes.Authentication.postLogin
-            let params: [String: Any] = [
-                "email": "codecontrive@gmail.com",
-                "password": "userx2"
-            ]
-            let headers: [String: String] = [
+            let headers: HTTPHeaders = [
                 "Content-Type": "Application/json"
             ]
             let request = Request(route: route, encoding: JSONEncoding.default, parameters: params, headers: headers)
             let netService = NetService(request: request)
-            let sendRequest = netService.sendRequest(type: ResponseUserLoginModel.self).subscribe(onNext: { result in
+            
+            let sendRequest = netService.sendRequest(type: ResponseUserLoginModel.self).subscribe(onNext: { response in
                 
-                guard let token = result?.token else {
+                if response?.responseState == .didFail {
                     o.onNext(false)
                     o.onCompleted()
-                    return
                 }
                 
-                CurrentUser.shared.updateToken(withToken: token)
-                
-                o.onNext(true)
+                if let token = response?.token {
+                    
+                    CurrentUser.shared.updateToken(withToken: token)
+                    let _ = self.getUser(usingToken: token).subscribe(onNext: { response in
+                        CurrentUser.shared.user = response
+                        o.onNext(true)
+                        o.onCompleted()
+                    })
+                } else {
+                    o.onNext(false)
+                    o.onCompleted()
+                }
             })
-
+            
             return Disposables.create {
                 sendRequest.dispose()
                 print("did dispose login")
@@ -48,13 +53,61 @@ class AuthenticationService {
         }
     }
     
-    func getUserByToken(token: String) -> Observable<Bool> {
+    func getUser(usingToken token: String) -> Observable<UserModel?> {
         
         return Observable.create { o in
             
-            return Disposables.create {
+            let route = Routes.Authentication.getUser
+            let headers: HTTPHeaders = [
+                "Content-Type": "Application/json",
+                "Authorization": "Token \(token)"
+            ]
+            let request = Request(route: route, encoding: JSONEncoding.default, parameters: nil, headers: headers)
+            let netService = NetService(request: request)
+            
+            let sendRequest = netService.sendRequest(type: ResponseUserModel.self).subscribe(onNext: { response in
                 
+                if let response = response {
+                    switch response.responseState {
+                    case .didGetUser:
+                        o.onNext(response.results?.getUserModel())
+                        o.onCompleted()
+                        break
+                    default:
+                        o.onNext(nil)
+                        o.onCompleted()
+                        break
+                    }
+                } else {
+                    o.onNext(nil)
+                    o.onCompleted()
+                }
+            })
+            
+            return Disposables.create {
+                sendRequest.dispose()
+                print("did dispose getUser")
             }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

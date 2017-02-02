@@ -12,13 +12,7 @@ class CurrentUser {
     
     static let shared: CurrentUser = CurrentUser()
     
-    var id: Int?
-    var email: String?
-    var firstName: String?
-    var lastName: String?
-    var company: String?
-    var userPermissions: [Int]?
-    
+    var user: UserModel?
     var token: String?
     
     init() { }

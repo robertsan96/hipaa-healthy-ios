@@ -32,4 +32,14 @@ class ResponseResultsUserModel: Mappable {
         self.userPermissions <- map["user_permissions"]
     }
     
+    func getUserModel() -> UserModel {
+        let userModel = UserModel()
+        userModel.company = self.company
+        userModel.email = self.email
+        userModel.firstName = self.firstName
+        userModel.id = self.id
+        userModel.lastName = self.lastName
+        
+        return userModel
+    }
 }
