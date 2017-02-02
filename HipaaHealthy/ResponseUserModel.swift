@@ -1,5 +1,5 @@
 //
-//  UserModel.swift
+//  ResponseUserModel.swift
 //  HipaaHealthy
 //
 //  Created by Robert Sandru on 1/31/17.
@@ -9,7 +9,12 @@
 import Foundation
 import ObjectMapper
 
-class UserModel: Mappable {
+class ResponseUserModel: Mappable {
+    
+    var internalCode: String?
+    var results: ResponseResultsUserModel?
+    
+    init() { }
     
     required init?(map: Map) {
         
@@ -17,5 +22,9 @@ class UserModel: Mappable {
     
     func mapping(map: Map) {
         
+        self.internalCode <- map["internal_code"]
+        self.results <- map["results"]
     }
+    
+
 }

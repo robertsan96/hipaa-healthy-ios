@@ -9,6 +9,8 @@
 import Foundation
 import Alamofire
 import AlamofireObjectMapper
+import ObjectMapper
+import RxSwift
 
 class NetService {
     
@@ -18,15 +20,22 @@ class NetService {
         self.request = request
     }
     
-    func sendRequest() {
-        Alamofire.request(self.request.route.url!,
-                          method: self.request.route.httpMethod,
-                          parameters: self.request.parameters,
-                          encoding: self.request.encoding,
-                          headers: self.request.headers)
-            .responseObject(completionHandler: { (data: DataResponse<UserModel>) -> Void in
-                
-            })
+    func sendRequest<T: Mappable>(type: T.Type) -> Observable<T?> {
+        return Observable.create { o in
+            let request = Alamofire.request(self.request.route.url!,
+                                            method: self.request.route.httpMethod,
+                                            parameters: self.request.parameters,
+                                            encoding: self.request.encoding,
+                                            headers: self.request.headers)
+                .responseObject(completionHandler: { (data: DataResponse<T>) in
+                    let response = data.result.value
+                    o.onNext(response)
+                    o.onCompleted()
+                })
+            return Disposables.create {
+                request.cancel()
+                print("did dispose sendRequest")
+            }
+        }
     }
-    
 }

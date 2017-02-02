@@ -13,7 +13,7 @@ struct Routes {
     
     struct Authentication {
         
-        static let getLogin = Route(slug: "user/", httpMethod: .get)
+        static let getUser = Route(slug: "user/", httpMethod: .get)
         static let postLogin = Route(slug: "user/login/", httpMethod: .post)
     }
     
