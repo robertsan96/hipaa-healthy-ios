@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		24B8E1EA28A58C958313A05C /* Pods_HipaaHealthyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF02B1BFD65A4157AFD8EAF /* Pods_HipaaHealthyTests.framework */; };
 		4611800D1E40066600F4FCFC /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4611800C1E40066600F4FCFC /* Routes.swift */; };
+		461734F81E43F0E200F6546E /* open-sans in Resources */ = {isa = PBXBuildFile; fileRef = 461734F71E43F0E200F6546E /* open-sans */; };
+		461734FE1E43F47E00F6546E /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461734FD1E43F47D00F6546E /* UIImage.swift */; };
 		464EDC2B1E3FF37D0043402B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464EDC2A1E3FF37D0043402B /* AppDelegate.swift */; };
 		464EDC2D1E3FF37D0043402B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464EDC2C1E3FF37D0043402B /* ViewController.swift */; };
 		464EDC301E3FF37D0043402B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464EDC2E1E3FF37D0043402B /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 		178698774D6D729252246B34 /* Pods-HipaaHealthyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipaaHealthyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HipaaHealthyTests/Pods-HipaaHealthyTests.release.xcconfig"; sourceTree = "<group>"; };
 		4064A507E78616614078C5BE /* Pods_HipaaHealthyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HipaaHealthyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4611800C1E40066600F4FCFC /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		461734F71E43F0E200F6546E /* open-sans */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "open-sans"; path = "Fonts/open-sans"; sourceTree = "<group>"; };
+		461734FD1E43F47D00F6546E /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		464EDC271E3FF37D0043402B /* HipaaHealthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HipaaHealthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		464EDC2A1E3FF37D0043402B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		464EDC2C1E3FF37D0043402B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +131,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		461734F61E43F0A900F6546E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				461734F71E43F0E200F6546E /* open-sans */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		461734F91E43F37700F6546E /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				464EDC331E3FF37D0043402B /* LaunchScreen.storyboard */,
+			);
+			name = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		461734FC1E43F46D00F6546E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				461734FD1E43F47D00F6546E /* UIImage.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		464EDC1E1E3FF37C0043402B = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				464EDC2A1E3FF37D0043402B /* AppDelegate.swift */,
+				461734FC1E43F46D00F6546E /* Extensions */,
 				4674A7911E400180005A8BB4 /* App */,
 				4674A7821E3FF9C4005A8BB4 /* Model */,
 				4674A7811E3FF9BE005A8BB4 /* View */,
@@ -191,8 +220,8 @@
 		4674A7811E3FF9BE005A8BB4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				461734F91E43F37700F6546E /* LaunchScreen */,
 				464EDC2E1E3FF37D0043402B /* Main.storyboard */,
-				464EDC331E3FF37D0043402B /* LaunchScreen.storyboard */,
 				464EDC2C1E3FF37D0043402B /* ViewController.swift */,
 				4674A7831E3FFA0D005A8BB4 /* Authentication */,
 			);
@@ -234,6 +263,7 @@
 		4674A78A1E400009005A8BB4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				461734F61E43F0A900F6546E /* Fonts */,
 				464EDC361E3FF37D0043402B /* Info.plist */,
 				464EDC311E3FF37D0043402B /* Assets.xcassets */,
 			);
@@ -439,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				464EDC351E3FF37D0043402B /* LaunchScreen.storyboard in Resources */,
+				461734F81E43F0E200F6546E /* open-sans in Resources */,
 				464EDC321E3FF37D0043402B /* Assets.xcassets in Resources */,
 				464EDC301E3FF37D0043402B /* Main.storyboard in Resources */,
 			);
@@ -609,6 +640,7 @@
 				4698F8951E43489300F09A82 /* AuthenticationService.swift in Sources */,
 				4698F8911E43248A00F09A82 /* ResponseResultsUserPermissionUserModel.swift in Sources */,
 				4674A78E1E400039005A8BB4 /* Request.swift in Sources */,
+				461734FE1E43F47E00F6546E /* UIImage.swift in Sources */,
 				4698F89A1E434C8500F09A82 /* CurrentUserModel.swift in Sources */,
 				464EDC2B1E3FF37D0043402B /* AppDelegate.swift in Sources */,
 				4698F89D1E435B5200F09A82 /* UserModel.swift in Sources */,
