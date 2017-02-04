@@ -12,7 +12,7 @@
 		461734F81E43F0E200F6546E /* open-sans in Resources */ = {isa = PBXBuildFile; fileRef = 461734F71E43F0E200F6546E /* open-sans */; };
 		461734FE1E43F47E00F6546E /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461734FD1E43F47D00F6546E /* UIImage.swift */; };
 		464EDC2B1E3FF37D0043402B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464EDC2A1E3FF37D0043402B /* AppDelegate.swift */; };
-		464EDC2D1E3FF37D0043402B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464EDC2C1E3FF37D0043402B /* ViewController.swift */; };
+		464EDC2D1E3FF37D0043402B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464EDC2C1E3FF37D0043402B /* LoginViewController.swift */; };
 		464EDC301E3FF37D0043402B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464EDC2E1E3FF37D0043402B /* Main.storyboard */; };
 		464EDC321E3FF37D0043402B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 464EDC311E3FF37D0043402B /* Assets.xcassets */; };
 		464EDC351E3FF37D0043402B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464EDC331E3FF37D0043402B /* LaunchScreen.storyboard */; };
@@ -31,6 +31,8 @@
 		4698F89F1E435F3000F09A82 /* UserPermissionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698F89E1E435F3000F09A82 /* UserPermissionModel.swift */; };
 		46996D791E40F4A000779076 /* ResponseResultsUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46996D781E40F4A000779076 /* ResponseResultsUserModel.swift */; };
 		469F5D1D1E40EB7100735C5A /* ResponseUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469F5D1C1E40EB7100735C5A /* ResponseUserModel.swift */; };
+		46D3521A1E44CD6200EB8703 /* HHTextFieldLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D352191E44CD6200EB8703 /* HHTextFieldLogin.swift */; };
+		46D3521C1E44E33100EB8703 /* HHColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D3521B1E44E33100EB8703 /* HHColorPalette.swift */; };
 		D09125EB92072E2CFF515B34 /* Pods_HipaaHealthyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4064A507E78616614078C5BE /* Pods_HipaaHealthyUITests.framework */; };
 		E1D4CF679D1C374D5AB6117F /* Pods_HipaaHealthy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56E20C328CB15AE8E003F0A /* Pods_HipaaHealthy.framework */; };
 /* End PBXBuildFile section */
@@ -60,7 +62,7 @@
 		461734FD1E43F47D00F6546E /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		464EDC271E3FF37D0043402B /* HipaaHealthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HipaaHealthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		464EDC2A1E3FF37D0043402B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		464EDC2C1E3FF37D0043402B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		464EDC2C1E3FF37D0043402B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		464EDC2F1E3FF37D0043402B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		464EDC311E3FF37D0043402B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		464EDC341E3FF37D0043402B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -84,6 +86,8 @@
 		4698F89E1E435F3000F09A82 /* UserPermissionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPermissionModel.swift; sourceTree = "<group>"; };
 		46996D781E40F4A000779076 /* ResponseResultsUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseResultsUserModel.swift; sourceTree = "<group>"; };
 		469F5D1C1E40EB7100735C5A /* ResponseUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseUserModel.swift; sourceTree = "<group>"; };
+		46D352191E44CD6200EB8703 /* HHTextFieldLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHTextFieldLogin.swift; sourceTree = "<group>"; };
+		46D3521B1E44E33100EB8703 /* HHColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHColorPalette.swift; sourceTree = "<group>"; };
 		51CDA0E0ACCB0026E9BB65DB /* Pods-HipaaHealthy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipaaHealthy.release.xcconfig"; path = "Pods/Target Support Files/Pods-HipaaHealthy/Pods-HipaaHealthy.release.xcconfig"; sourceTree = "<group>"; };
 		75655273F13CDAEB25E73819 /* Pods-HipaaHealthyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipaaHealthyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HipaaHealthyUITests/Pods-HipaaHealthyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8A455CF00944353DE5E1147B /* Pods-HipaaHealthy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipaaHealthy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HipaaHealthy/Pods-HipaaHealthy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				464EDC2A1E3FF37D0043402B /* AppDelegate.swift */,
+				46D352181E44CD4900EB8703 /* Custom UI Elements */,
 				461734FC1E43F46D00F6546E /* Extensions */,
 				4674A7911E400180005A8BB4 /* App */,
 				4674A7821E3FF9C4005A8BB4 /* Model */,
@@ -222,7 +227,6 @@
 			children = (
 				461734F91E43F37700F6546E /* LaunchScreen */,
 				464EDC2E1E3FF37D0043402B /* Main.storyboard */,
-				464EDC2C1E3FF37D0043402B /* ViewController.swift */,
 				4674A7831E3FFA0D005A8BB4 /* Authentication */,
 			);
 			name = View;
@@ -240,6 +244,7 @@
 		4674A7831E3FFA0D005A8BB4 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				464EDC2C1E3FF37D0043402B /* LoginViewController.swift */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -334,6 +339,23 @@
 				4698F8961E434AF900F09A82 /* Authentication / User */,
 			);
 			name = ResponseModel;
+			sourceTree = "<group>";
+		};
+		46D352181E44CD4900EB8703 /* Custom UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				46D352191E44CD6200EB8703 /* HHTextFieldLogin.swift */,
+				46D3521D1E44E39000EB8703 /* Themes */,
+			);
+			name = "Custom UI Elements";
+			sourceTree = "<group>";
+		};
+		46D3521D1E44E39000EB8703 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				46D3521B1E44E33100EB8703 /* HHColorPalette.swift */,
+			);
+			name = Themes;
 			sourceTree = "<group>";
 		};
 		E8EB6241D73A87DA6AEDBC50 /* Pods */ = {
@@ -636,8 +658,9 @@
 			files = (
 				4674A7941E4002C4005A8BB4 /* RoutingCoordinator.swift in Sources */,
 				4611800D1E40066600F4FCFC /* Routes.swift in Sources */,
-				464EDC2D1E3FF37D0043402B /* ViewController.swift in Sources */,
+				464EDC2D1E3FF37D0043402B /* LoginViewController.swift in Sources */,
 				4698F8951E43489300F09A82 /* AuthenticationService.swift in Sources */,
+				46D3521A1E44CD6200EB8703 /* HHTextFieldLogin.swift in Sources */,
 				4698F8911E43248A00F09A82 /* ResponseResultsUserPermissionUserModel.swift in Sources */,
 				4674A78E1E400039005A8BB4 /* Request.swift in Sources */,
 				461734FE1E43F47E00F6546E /* UIImage.swift in Sources */,
@@ -650,6 +673,7 @@
 				4674A7961E4002EC005A8BB4 /* Route.swift in Sources */,
 				4698F89F1E435F3000F09A82 /* UserPermissionModel.swift in Sources */,
 				46996D791E40F4A000779076 /* ResponseResultsUserModel.swift in Sources */,
+				46D3521C1E44E33100EB8703 /* HHColorPalette.swift in Sources */,
 				4674A7891E3FFF91005A8BB4 /* NetService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

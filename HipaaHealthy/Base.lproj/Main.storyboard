@@ -6,13 +6,19 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HipaaHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="HipaaHealthy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,47 +28,113 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="vN8-Sf-plo">
-                                <rect key="frame" x="149" y="170" width="76" height="76"/>
+                                <rect key="frame" x="149" y="100" width="76" height="76"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="76" id="UfI-X9-JE2"/>
-                                    <constraint firstAttribute="height" constant="76" id="UfR-tv-Puu"/>
+                                    <constraint firstAttribute="width" constant="76" id="Yai-fE-bWe"/>
+                                    <constraint firstAttribute="height" constant="76" id="gVK-Dc-uXH"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eBs-OA-tDf">
-                                <rect key="frame" x="40" y="301" width="295" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIPAA Healthy" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Td-oa-bfi">
+                                <rect key="frame" x="16" y="190" width="343" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="HTN-uV-DAh"/>
-                                    <constraint firstAttribute="width" constant="295" id="Irk-qN-SFS"/>
+                                    <constraint firstAttribute="width" constant="343" id="93K-kr-wzj"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eOX-Kg-0a8">
-                                <rect key="frame" x="40" y="339" width="295" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAw-Rb-N67">
+                                <rect key="frame" x="16" y="261" width="343" height="205"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="loginPasswordTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eOX-Kg-0a8" customClass="HHTextFieldLogin" customModule="HipaaHealthy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44" width="343" height="44"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijL-t2-bsO">
+                                        <rect key="frame" x="0.0" y="110" width="343" height="44"/>
+                                        <state key="normal" title="Login" backgroundImage="BlueButtonBackground">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="loginEmailTextField" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eBs-OA-tDf" customClass="HHTextFieldLogin" customModule="HipaaHealthy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="djf-Tc-o1D"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2p-h4-ktT">
+                                        <rect key="frame" x="0.0" y="162" width="343" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="E39-zD-BoY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="10"/>
+                                        <state key="normal" title="Lost password?">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="eOX-Kg-0a8" firstAttribute="height" secondItem="eBs-OA-tDf" secondAttribute="height" id="2bu-cg-189"/>
+                                    <constraint firstItem="eBs-OA-tDf" firstAttribute="leading" secondItem="wAw-Rb-N67" secondAttribute="leading" id="6kd-hH-rUz"/>
+                                    <constraint firstAttribute="bottom" secondItem="eBs-OA-tDf" secondAttribute="bottom" constant="161" id="B8x-PE-g6C"/>
+                                    <constraint firstAttribute="height" constant="205" id="CMW-Pv-usW"/>
+                                    <constraint firstItem="K2p-h4-ktT" firstAttribute="top" secondItem="ijL-t2-bsO" secondAttribute="bottom" constant="8" id="ICn-1s-ONy"/>
+                                    <constraint firstItem="ijL-t2-bsO" firstAttribute="leading" secondItem="wAw-Rb-N67" secondAttribute="leading" id="IOy-CB-Si1"/>
+                                    <constraint firstItem="eOX-Kg-0a8" firstAttribute="top" secondItem="eBs-OA-tDf" secondAttribute="bottom" id="LS1-qI-WSl"/>
+                                    <constraint firstAttribute="width" constant="343" id="RG7-bh-7Y6"/>
+                                    <constraint firstItem="K2p-h4-ktT" firstAttribute="width" secondItem="ijL-t2-bsO" secondAttribute="width" id="SxR-6p-J5D"/>
+                                    <constraint firstItem="K2p-h4-ktT" firstAttribute="centerX" secondItem="ijL-t2-bsO" secondAttribute="centerX" id="eXg-xu-VVw"/>
+                                    <constraint firstItem="eBs-OA-tDf" firstAttribute="width" secondItem="wAw-Rb-N67" secondAttribute="width" id="fWn-fP-GVK"/>
+                                    <constraint firstAttribute="trailing" secondItem="ijL-t2-bsO" secondAttribute="trailing" id="jc1-8g-DQ7"/>
+                                    <constraint firstItem="eOX-Kg-0a8" firstAttribute="width" secondItem="eBs-OA-tDf" secondAttribute="width" id="lyq-h5-BwH"/>
+                                    <constraint firstItem="eOX-Kg-0a8" firstAttribute="centerX" secondItem="eBs-OA-tDf" secondAttribute="centerX" id="mOI-c8-dF2"/>
+                                    <constraint firstItem="ijL-t2-bsO" firstAttribute="top" secondItem="eOX-Kg-0a8" secondAttribute="bottom" constant="22" id="pLD-J6-pSz"/>
+                                    <constraint firstItem="ijL-t2-bsO" firstAttribute="centerX" secondItem="wAw-Rb-N67" secondAttribute="centerX" id="tva-ZW-iu0"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.11764705882352941" green="0.12941176470588234" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.11764705882352941" green="0.12941176470588234" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="eBs-OA-tDf" firstAttribute="centerX" secondItem="vN8-Sf-plo" secondAttribute="centerX" id="1Tu-gU-lqc"/>
-                            <constraint firstItem="eOX-Kg-0a8" firstAttribute="centerX" secondItem="eBs-OA-tDf" secondAttribute="centerX" id="B1T-8f-62Q"/>
-                            <constraint firstItem="eOX-Kg-0a8" firstAttribute="top" secondItem="eBs-OA-tDf" secondAttribute="bottom" constant="8" id="IZ1-s0-3FC"/>
-                            <constraint firstItem="vN8-Sf-plo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S6E-fl-DJE"/>
-                            <constraint firstItem="eBs-OA-tDf" firstAttribute="top" secondItem="vN8-Sf-plo" secondAttribute="bottom" constant="55" id="Xjq-Lb-Ery"/>
-                            <constraint firstItem="vN8-Sf-plo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="Z4n-Dl-yd6"/>
-                            <constraint firstItem="eOX-Kg-0a8" firstAttribute="width" secondItem="eBs-OA-tDf" secondAttribute="width" id="dvJ-DX-bPE"/>
+                            <constraint firstItem="vN8-Sf-plo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Ns-7D-OlY"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="wAw-Rb-N67" secondAttribute="trailing" id="DCV-Km-wlA"/>
+                            <constraint firstAttribute="leadingMargin" relation="lessThanOrEqual" secondItem="wAw-Rb-N67" secondAttribute="leading" id="L7q-sp-0IG"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="6Td-oa-bfi" secondAttribute="trailing" id="Lut-4Z-XlN"/>
+                            <constraint firstAttribute="leadingMargin" relation="lessThanOrEqual" secondItem="6Td-oa-bfi" secondAttribute="leading" id="O0j-cv-Bko"/>
+                            <constraint firstItem="vN8-Sf-plo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="P8H-3X-A4H"/>
+                            <constraint firstItem="6Td-oa-bfi" firstAttribute="top" secondItem="vN8-Sf-plo" secondAttribute="bottom" constant="14" id="SbC-8M-fwj"/>
+                            <constraint firstItem="wAw-Rb-N67" firstAttribute="top" secondItem="6Td-oa-bfi" secondAttribute="bottom" constant="50.5" id="Uew-A1-cjG"/>
+                            <constraint firstItem="6Td-oa-bfi" firstAttribute="centerX" secondItem="vN8-Sf-plo" secondAttribute="centerX" id="j9Q-ag-mMa"/>
+                            <constraint firstItem="wAw-Rb-N67" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="slh-XC-zCM"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="FhN-Hm-gyx" appends="YES" id="5Dz-wn-dvM"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="authBoxView" destination="wAw-Rb-N67" id="GRj-pr-ktQ"/>
+                        <outlet property="emailTextField" destination="eBs-OA-tDf" id="oAO-qP-izL"/>
+                        <outlet property="lostPasswordButton" destination="K2p-h4-ktT" id="FSa-m3-zxi"/>
+                        <outlet property="passwordTextField" destination="eOX-Kg-0a8" id="wsH-Se-QQc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="FhN-Hm-gyx">
+                    <connections>
+                        <action selector="gestureCloseKeyboard:" destination="BYZ-38-t0r" id="1qb-Zf-Pwn"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
     </scenes>
     <resources>
+        <image name="BlueButtonBackground" width="343" height="44"/>
         <image name="Logo" width="76" height="76"/>
     </resources>
 </document>
