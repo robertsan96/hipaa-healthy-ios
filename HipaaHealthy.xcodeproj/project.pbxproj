@@ -10,7 +10,7 @@
 		24B8E1EA28A58C958313A05C /* Pods_HipaaHealthyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF02B1BFD65A4157AFD8EAF /* Pods_HipaaHealthyTests.framework */; };
 		4611800D1E40066600F4FCFC /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4611800C1E40066600F4FCFC /* Routes.swift */; };
 		461734F81E43F0E200F6546E /* open-sans in Resources */ = {isa = PBXBuildFile; fileRef = 461734F71E43F0E200F6546E /* open-sans */; };
-		461734FE1E43F47E00F6546E /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461734FD1E43F47D00F6546E /* UIImage.swift */; };
+		461734FE1E43F47E00F6546E /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461734FD1E43F47D00F6546E /* UIImageView.swift */; };
 		464EDC2B1E3FF37D0043402B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464EDC2A1E3FF37D0043402B /* AppDelegate.swift */; };
 		464EDC2D1E3FF37D0043402B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464EDC2C1E3FF37D0043402B /* LoginViewController.swift */; };
 		464EDC301E3FF37D0043402B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464EDC2E1E3FF37D0043402B /* Main.storyboard */; };
@@ -23,6 +23,7 @@
 		4674A7901E400111005A8BB4 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674A78F1E400111005A8BB4 /* App.swift */; };
 		4674A7941E4002C4005A8BB4 /* RoutingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674A7931E4002C4005A8BB4 /* RoutingCoordinator.swift */; };
 		4674A7961E4002EC005A8BB4 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4674A7951E4002EC005A8BB4 /* Route.swift */; };
+		468CB3D21E463031009EA94D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468CB3D11E463031009EA94D /* LoginViewModel.swift */; };
 		4698F8911E43248A00F09A82 /* ResponseResultsUserPermissionUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698F8901E43248900F09A82 /* ResponseResultsUserPermissionUserModel.swift */; };
 		4698F8951E43489300F09A82 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698F8941E43489300F09A82 /* AuthenticationService.swift */; };
 		4698F8981E434B0D00F09A82 /* ResponseUserLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698F8971E434B0D00F09A82 /* ResponseUserLoginModel.swift */; };
@@ -59,7 +60,7 @@
 		4064A507E78616614078C5BE /* Pods_HipaaHealthyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HipaaHealthyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4611800C1E40066600F4FCFC /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		461734F71E43F0E200F6546E /* open-sans */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "open-sans"; path = "Fonts/open-sans"; sourceTree = "<group>"; };
-		461734FD1E43F47D00F6546E /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		461734FD1E43F47D00F6546E /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		464EDC271E3FF37D0043402B /* HipaaHealthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HipaaHealthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		464EDC2A1E3FF37D0043402B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		464EDC2C1E3FF37D0043402B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		4674A78F1E400111005A8BB4 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		4674A7931E4002C4005A8BB4 /* RoutingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingCoordinator.swift; sourceTree = "<group>"; };
 		4674A7951E4002EC005A8BB4 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		468CB3D11E463031009EA94D /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4698F8901E43248900F09A82 /* ResponseResultsUserPermissionUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseResultsUserPermissionUserModel.swift; sourceTree = "<group>"; };
 		4698F8941E43489300F09A82 /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		4698F8971E434B0D00F09A82 /* ResponseUserLoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseUserLoginModel.swift; sourceTree = "<group>"; };
@@ -154,7 +156,7 @@
 		461734FC1E43F46D00F6546E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				461734FD1E43F47D00F6546E /* UIImage.swift */,
+				461734FD1E43F47D00F6546E /* UIImageView.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -226,7 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				461734F91E43F37700F6546E /* LaunchScreen */,
-				464EDC2E1E3FF37D0043402B /* Main.storyboard */,
 				4674A7831E3FFA0D005A8BB4 /* Authentication */,
 			);
 			name = View;
@@ -244,6 +245,7 @@
 		4674A7831E3FFA0D005A8BB4 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				464EDC2E1E3FF37D0043402B /* Main.storyboard */,
 				464EDC2C1E3FF37D0043402B /* LoginViewController.swift */,
 			);
 			name = Authentication;
@@ -252,6 +254,7 @@
 		4674A7841E3FFA1A005A8BB4 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				468CB3D11E463031009EA94D /* LoginViewModel.swift */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -663,7 +666,8 @@
 				46D3521A1E44CD6200EB8703 /* HHTextFieldLogin.swift in Sources */,
 				4698F8911E43248A00F09A82 /* ResponseResultsUserPermissionUserModel.swift in Sources */,
 				4674A78E1E400039005A8BB4 /* Request.swift in Sources */,
-				461734FE1E43F47E00F6546E /* UIImage.swift in Sources */,
+				461734FE1E43F47E00F6546E /* UIImageView.swift in Sources */,
+				468CB3D21E463031009EA94D /* LoginViewModel.swift in Sources */,
 				4698F89A1E434C8500F09A82 /* CurrentUserModel.swift in Sources */,
 				464EDC2B1E3FF37D0043402B /* AppDelegate.swift in Sources */,
 				4698F89D1E435B5200F09A82 /* UserModel.swift in Sources */,

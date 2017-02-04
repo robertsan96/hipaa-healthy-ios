@@ -35,7 +35,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIPAA Healthy" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Td-oa-bfi">
-                                <rect key="frame" x="16" y="190" width="343" height="21"/>
+                                <rect key="frame" x="16" y="190" width="343" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="93K-kr-wzj"/>
                                 </constraints>
@@ -44,7 +44,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAw-Rb-N67">
-                                <rect key="frame" x="16" y="261" width="343" height="205"/>
+                                <rect key="frame" x="16" y="260.5" width="343" height="205"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="loginPasswordTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eOX-Kg-0a8" customClass="HHTextFieldLogin" customModule="HipaaHealthy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44" width="343" height="44"/>
@@ -57,6 +57,9 @@
                                         <state key="normal" title="Login" backgroundImage="BlueButtonBackground">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zmA-vT-CmM"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="loginEmailTextField" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eBs-OA-tDf" customClass="HHTextFieldLogin" customModule="HipaaHealthy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
@@ -97,12 +100,20 @@
                                     <constraint firstItem="ijL-t2-bsO" firstAttribute="centerX" secondItem="wAw-Rb-N67" secondAttribute="centerX" id="tva-ZW-iu0"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spinner" translatesAutoresizingMaskIntoConstraints="NO" id="p8J-cR-sGg">
+                                <rect key="frame" x="155" y="331" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="7aZ-Bp-Ida"/>
+                                    <constraint firstAttribute="height" constant="65" id="a7G-iW-lrG"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.11764705882352941" green="0.12941176470588234" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="vN8-Sf-plo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Ns-7D-OlY"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="wAw-Rb-N67" secondAttribute="trailing" id="DCV-Km-wlA"/>
+                            <constraint firstItem="p8J-cR-sGg" firstAttribute="centerX" secondItem="6Td-oa-bfi" secondAttribute="centerX" id="Kaz-es-gY4"/>
                             <constraint firstAttribute="leadingMargin" relation="lessThanOrEqual" secondItem="wAw-Rb-N67" secondAttribute="leading" id="L7q-sp-0IG"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="6Td-oa-bfi" secondAttribute="trailing" id="Lut-4Z-XlN"/>
                             <constraint firstAttribute="leadingMargin" relation="lessThanOrEqual" secondItem="6Td-oa-bfi" secondAttribute="leading" id="O0j-cv-Bko"/>
@@ -110,6 +121,7 @@
                             <constraint firstItem="6Td-oa-bfi" firstAttribute="top" secondItem="vN8-Sf-plo" secondAttribute="bottom" constant="14" id="SbC-8M-fwj"/>
                             <constraint firstItem="wAw-Rb-N67" firstAttribute="top" secondItem="6Td-oa-bfi" secondAttribute="bottom" constant="50.5" id="Uew-A1-cjG"/>
                             <constraint firstItem="6Td-oa-bfi" firstAttribute="centerX" secondItem="vN8-Sf-plo" secondAttribute="centerX" id="j9Q-ag-mMa"/>
+                            <constraint firstItem="p8J-cR-sGg" firstAttribute="top" secondItem="6Td-oa-bfi" secondAttribute="bottom" constant="120.5" id="khQ-Vl-ahd"/>
                             <constraint firstItem="wAw-Rb-N67" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="slh-XC-zCM"/>
                         </constraints>
                         <connections>
@@ -119,8 +131,10 @@
                     <connections>
                         <outlet property="authBoxView" destination="wAw-Rb-N67" id="GRj-pr-ktQ"/>
                         <outlet property="emailTextField" destination="eBs-OA-tDf" id="oAO-qP-izL"/>
+                        <outlet property="loginButton" destination="ijL-t2-bsO" id="VNI-6m-kTq"/>
                         <outlet property="lostPasswordButton" destination="K2p-h4-ktT" id="FSa-m3-zxi"/>
                         <outlet property="passwordTextField" destination="eOX-Kg-0a8" id="wsH-Se-QQc"/>
+                        <outlet property="spinner" destination="p8J-cR-sGg" id="AXo-r9-xc3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -136,5 +150,6 @@
     <resources>
         <image name="BlueButtonBackground" width="343" height="44"/>
         <image name="Logo" width="76" height="76"/>
+        <image name="Spinner" width="29" height="29"/>
     </resources>
 </document>

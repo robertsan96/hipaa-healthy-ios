@@ -15,9 +15,7 @@ class AuthenticationService {
     init() { }
     
     func login(params: [String: Any]) -> Observable<Bool> {
-        
         return Observable.create { o in
-            
             let route = Routes.Authentication.postLogin
             let headers: HTTPHeaders = [
                 "Content-Type": "Application/json"
@@ -26,14 +24,11 @@ class AuthenticationService {
             let netService = NetService(request: request)
             
             let sendRequest = netService.sendRequest(type: ResponseUserLoginModel.self).subscribe(onNext: { response in
-                
                 if response?.responseState == .didFail {
                     o.onNext(false)
                     o.onCompleted()
                 }
-                
                 if let token = response?.token {
-                    
                     CurrentUser.shared.updateToken(withToken: token)
                     let _ = self.getUser(usingToken: token).subscribe(onNext: { response in
                         CurrentUser.shared.user = response
@@ -45,7 +40,6 @@ class AuthenticationService {
                     o.onCompleted()
                 }
             })
-            
             return Disposables.create {
                 sendRequest.dispose()
                 print("did dispose login")
@@ -54,9 +48,7 @@ class AuthenticationService {
     }
     
     func getUser(usingToken token: String) -> Observable<UserModel?> {
-        
         return Observable.create { o in
-            
             let route = Routes.Authentication.getUser
             let headers: HTTPHeaders = [
                 "Content-Type": "Application/json",
@@ -66,7 +58,6 @@ class AuthenticationService {
             let netService = NetService(request: request)
             
             let sendRequest = netService.sendRequest(type: ResponseUserModel.self).subscribe(onNext: { response in
-                
                 if let response = response {
                     switch response.responseState {
                     case .didGetUser:
@@ -83,7 +74,6 @@ class AuthenticationService {
                     o.onCompleted()
                 }
             })
-            
             return Disposables.create {
                 sendRequest.dispose()
                 print("did dispose getUser")
