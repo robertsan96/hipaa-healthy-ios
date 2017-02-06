@@ -34,25 +34,51 @@ class App {
     }
 
     func startApp() {
-        let vc = Storyboard.Home.homeViewController()
-        self.rootViewController?.navigationController?.pushViewController(vc, animated: true)
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        let initialViewController = Storyboard.Authentication.loginViewController()
+        initialViewController.delegate = self
+        appDelegate?.window = UIWindow(frame: UIScreen.main.bounds)
+        appDelegate?.window?.rootViewController = initialViewController
+        appDelegate?.window?.makeKeyAndVisible()
+        
+        self.rootViewController = appDelegate?
+            .window?.rootViewController
     }
 
     func timerOperations(repeatCount: Int) {
-        self.currentUserModel.verifyToken()
+        self.currentUserModel.updateAuthStatusByToken()
+    }
+    
+    func showHome() {
+        let vc = Storyboard.Home.homeViewController()
+        self.rootViewController?.show(vc, sender: nil)
+    }
+    
+    func showLogin() {
+        
+        let vc = Storyboard.Authentication.loginViewController()
+        vc.delegate = self
+        
+        self.rootViewController?.show(vc, sender: nil)
     }
 }
 
-extension App: CurrentUserModelDelegate {
-    func currentUserModelDelegateLoggedIn(model: CurrentUserModel) {
-        print("LOGGED IN ... HERES A DELEGATE")
+extension App: LoginViewControllerDelegate {
+    
+    func loginViewControllerDidLogin(viewController: LoginViewController) {
+       showHome()
+        
     }
+    
+    func loginViewControllerDidFailLogin(viewController: LoginViewController) { }
+}
+
+extension App: CurrentUserModelDelegate {
+    
+    func currentUserModelDelegateLoggedIn(model: CurrentUserModel) { }
     
     func currentUserModelDelegateLoggedOut(model: CurrentUserModel) {
-        print("YOU ARE LOGGED OUT HONEY")
-    }
-    
-    func currentUserModelDelegateLoggedOutDueToInvalidToken(model: CurrentUserModel) {
-        print("LOGGED OUT FALSE TOKEN")
+        print("logged out")
+        showLogin()
     }
 }

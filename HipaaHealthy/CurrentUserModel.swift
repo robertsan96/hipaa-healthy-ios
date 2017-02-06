@@ -10,20 +10,19 @@ import Foundation
 import RxSwift
 
 enum CurrentUserModelAuthStatus {
+    
     case loggedIn
     case loggedOut
-    case loggedOutDueToInvalidToken
 }
 
 protocol CurrentUserModelDelegate: class {
     
     func currentUserModelDelegateLoggedIn(model: CurrentUserModel)
     func currentUserModelDelegateLoggedOut(model: CurrentUserModel)
-    func currentUserModelDelegateLoggedOutDueToInvalidToken(model: CurrentUserModel)
 }
 
 class CurrentUserModel {
-
+    
     static let shared: CurrentUserModel = CurrentUserModel()
     weak var delegate: CurrentUserModelDelegate?
     
@@ -35,7 +34,6 @@ class CurrentUserModel {
         }
         set {
             self.token = newValue
-            verifyToken()
         }
     }
     var authStatus: Variable<CurrentUserModelAuthStatus> = Variable(.loggedOut)
@@ -43,30 +41,30 @@ class CurrentUserModel {
     var disposeBag = DisposeBag()
     
     init() {
-        self.authStatus.asObservable().distinctUntilChanged().subscribe(onNext: { [weak self] status in
-            switch status {
-            case .loggedOutDueToInvalidToken:
-                self?.delegate?.currentUserModelDelegateLoggedOutDueToInvalidToken(model: self!)
-                break
-            case .loggedIn:
-                self?.delegate?.currentUserModelDelegateLoggedIn(model: self!)
-                break
-            case .loggedOut:
-                self?.delegate?.currentUserModelDelegateLoggedOut(model: self!)
-                break
-            }
-        }).addDisposableTo(disposeBag)
+        self.authStatus
+            .asObservable()
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] status in
+                switch status {
+                case .loggedIn:
+                    self?.delegate?.currentUserModelDelegateLoggedIn(model: self!)
+                    break
+                case .loggedOut:
+                    self?.delegate?.currentUserModelDelegateLoggedOut(model: self!)
+                    break
+                }
+            }).addDisposableTo(disposeBag)
     }
-
+    
     func updateUserData() {
-
+        
     }
-
+    
     func updateToken(withToken token: String) {
         self.unprocessedToken = token
     }
-
-    @objc func verifyToken() {
+    
+    @objc func updateAuthStatusByToken() {
         self.verifyTokenDisposeBag = DisposeBag()
         if let token = self.token {
             let authService = AuthenticationService()
@@ -74,11 +72,7 @@ class CurrentUserModel {
                 if isValid {
                     self?.authStatus.value = .loggedIn
                 } else {
-                    if self?.authStatus.value == .loggedIn {
-                        self?.authStatus.value = .loggedOutDueToInvalidToken
-                    } else {
-                        self?.authStatus.value = .loggedOut
-                    }
+                    self?.authStatus.value = .loggedOut
                 }
             }).addDisposableTo(verifyTokenDisposeBag)
         } else {

@@ -11,12 +11,15 @@ import Alamofire
 import RxSwift
 
 enum LoginViewControllerState {
+    
     case idle
     case loggingIn
 }
 
 protocol LoginViewControllerDelegate: class {
-    func loginViewControllerDidLogin(viewController: LoginViewController?)
+    
+    func loginViewControllerDidLogin(viewController: LoginViewController)
+    func loginViewControllerDidFailLogin(viewController: LoginViewController)
 }
 
 class LoginViewController: UIViewController {
@@ -79,8 +82,9 @@ class LoginViewController: UIViewController {
                 self?.changeLoginButtonState(enabled: true)
                 self?.controllerState.value = .idle
                 if success {
-                    self?.delegate?.loginViewControllerDidLogin(viewController: self)
+                    self?.delegate?.loginViewControllerDidLogin(viewController: self!)
                 } else {
+                    self?.delegate?.loginViewControllerDidFailLogin(viewController: self!)
                     self?.showLoginFailedAlert()
                 }
             }).addDisposableTo(disposeBag)

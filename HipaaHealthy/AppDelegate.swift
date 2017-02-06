@@ -20,12 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         UIApplication.shared.statusBarStyle = .lightContent
 
-        let initialViewController = Storyboard.Authentication.loginViewController()
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
-
-        self.app?.rootViewController = self.window?.rootViewController
         self.app?.startApp()
         return true
     }
