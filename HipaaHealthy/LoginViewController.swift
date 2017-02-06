@@ -10,9 +10,13 @@ import UIKit
 import Alamofire
 import RxSwift
 
-enum loginViewControllerState {
+enum LoginViewControllerState {
     case idle
     case loggingIn
+}
+
+protocol LoginViewControllerDelegate: class {
+    func loginViewControllerDidLogin(viewController: LoginViewController?)
 }
 
 class LoginViewController: UIViewController {
@@ -26,11 +30,12 @@ class LoginViewController: UIViewController {
     
     var disposeBag: DisposeBag = DisposeBag()
     let viewModel: LoginViewModel = LoginViewModel()
-    var controllerState: Variable<loginViewControllerState> = Variable(.idle)
+    var controllerState: Variable<LoginViewControllerState> = Variable(.idle)
+    
+    weak var delegate: LoginViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
 //        let params: Parameters = [
 //            "email": "codecontrive@gmail.com",
@@ -42,13 +47,9 @@ class LoginViewController: UIViewController {
 //
 //        })
     
-//        let _ = AuthenticationService().getUser(usingToken: "8ac1f93896bf0f7a3806320311a1b4d7e7945595")
-//            .subscribe(onNext: { user in
-//                if let user = user {
-//                    print("Hello \(user.firstName)")
-//                } else {
-//                    print("Pleaca acas ca nu e bun tokenu")
-//                }
+//        let _ = AuthenticationService().verifyToken(token: "8ac1f93896bf0f7a3806320311a1b4d7e7945595")
+//            .subscribe(onNext: { valid in
+//                print("DECI TOKENUL E \(valid)")
 //            })
 
         self.controllerState.asObservable().subscribe(onNext: updatedControllerState).addDisposableTo(disposeBag)
@@ -77,6 +78,11 @@ class LoginViewController: UIViewController {
             viewModel.sendLogin(email: email, password: password).asObservable().subscribe(onNext: { [weak self] success in
                 self?.changeLoginButtonState(enabled: true)
                 self?.controllerState.value = .idle
+                if success {
+                    self?.delegate?.loginViewControllerDidLogin(viewController: self)
+                } else {
+                    self?.showLoginFailedAlert()
+                }
             }).addDisposableTo(disposeBag)
         }
     }
@@ -92,7 +98,6 @@ class LoginViewController: UIViewController {
             } else {
                 self?.authBoxView.alpha = 0.0
             }
-
         })
     }
     
@@ -106,7 +111,7 @@ class LoginViewController: UIViewController {
         })
     }
     
-    func updatedControllerState(state: loginViewControllerState) -> Void {
+    func updatedControllerState(state: LoginViewControllerState) {
         switch state {
         case .idle:
             self.updateAuthBoxVisibility(visible: true)
@@ -120,5 +125,16 @@ class LoginViewController: UIViewController {
         }
     }
     
+    func showLoginFailedAlert() {
+        let alertTitle = "Authentication failed"
+        let alertMessage = "Please try again. If you forgot your password, continue by tapping on Lost Password button."
+        let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+        
+        let alertActionCancel = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        
+        alertController.addAction(alertActionCancel)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
 }
-

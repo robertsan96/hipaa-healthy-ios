@@ -15,6 +15,7 @@ struct Routes {
         
         static let getUser = Route(slug: "user/", httpMethod: .get)
         static let postLogin = Route(slug: "user/login/", httpMethod: .post)
+        static let verifyToken = Route(slug: "user/verify_token/", httpMethod: .post)
     }
     
     struct Items {

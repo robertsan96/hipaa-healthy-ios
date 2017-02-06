@@ -18,7 +18,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="HipaaHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="HipaaHealthy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -35,7 +35,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIPAA Healthy" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Td-oa-bfi">
-                                <rect key="frame" x="16" y="190" width="343" height="20.5"/>
+                                <rect key="frame" x="16" y="190" width="343" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="93K-kr-wzj"/>
                                 </constraints>
@@ -44,13 +44,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAw-Rb-N67">
-                                <rect key="frame" x="16" y="260.5" width="343" height="205"/>
+                                <rect key="frame" x="16" y="258" width="343" height="205"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="loginPasswordTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eOX-Kg-0a8" customClass="HHTextFieldLogin" customModule="HipaaHealthy" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="loginPasswordTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="userx2" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eOX-Kg-0a8" customClass="HHTextFieldLogin" customModule="HipaaHealthy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44" width="343" height="44"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijL-t2-bsO">
                                         <rect key="frame" x="0.0" y="110" width="343" height="44"/>
@@ -61,7 +61,7 @@
                                             <action selector="onLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zmA-vT-CmM"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="loginEmailTextField" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eBs-OA-tDf" customClass="HHTextFieldLogin" customModule="HipaaHealthy" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="loginEmailTextField" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="codecontrive@gmail.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eBs-OA-tDf" customClass="HHTextFieldLogin" customModule="HipaaHealthy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="djf-Tc-o1D"/>
@@ -101,7 +101,7 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spinner" translatesAutoresizingMaskIntoConstraints="NO" id="p8J-cR-sGg">
-                                <rect key="frame" x="155" y="331" width="65" height="65"/>
+                                <rect key="frame" x="155" y="329" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="7aZ-Bp-Ida"/>
                                     <constraint firstAttribute="height" constant="65" id="a7G-iW-lrG"/>
@@ -145,6 +145,33 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="4tf-MA-cBj">
+            <objects>
+                <viewController storyboardIdentifier="homeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2OP-25-v9X" customClass="HomeViewController" customModule="HipaaHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dWe-Ib-5V7"/>
+                        <viewControllerLayoutGuide type="bottom" id="QPR-hX-WgV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PvI-G8-P0X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to the home screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5W-6P-h6r">
+                                <rect key="frame" x="75" y="323" width="224" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wV4-Wk-pFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="749"/>
         </scene>
     </scenes>
     <resources>

@@ -1,0 +1,11 @@
+excluded:
+- Pods
+
+line_length: 200
+variable_name: 
+ excluded:
+  - id
+
+disabled_rules:
+- nesting
+- trailing_whitespace

@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		24B8E1EA28A58C958313A05C /* Pods_HipaaHealthyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF02B1BFD65A4157AFD8EAF /* Pods_HipaaHealthyTests.framework */; };
 		4611800D1E40066600F4FCFC /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4611800C1E40066600F4FCFC /* Routes.swift */; };
+		4615EFF81E47B302005D46DB /* ResponseUserVerifyTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615EFF71E47B302005D46DB /* ResponseUserVerifyTokenModel.swift */; };
 		461734F81E43F0E200F6546E /* open-sans in Resources */ = {isa = PBXBuildFile; fileRef = 461734F71E43F0E200F6546E /* open-sans */; };
 		461734FE1E43F47E00F6546E /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461734FD1E43F47D00F6546E /* UIImageView.swift */; };
+		464E90F41E46782E00648F66 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E90F31E46782E00648F66 /* HomeViewController.swift */; };
+		464E90F61E46790C00648F66 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E90F51E46790C00648F66 /* Storyboard.swift */; };
 		464EDC2B1E3FF37D0043402B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464EDC2A1E3FF37D0043402B /* AppDelegate.swift */; };
 		464EDC2D1E3FF37D0043402B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464EDC2C1E3FF37D0043402B /* LoginViewController.swift */; };
 		464EDC301E3FF37D0043402B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464EDC2E1E3FF37D0043402B /* Main.storyboard */; };
@@ -59,8 +62,11 @@
 		178698774D6D729252246B34 /* Pods-HipaaHealthyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipaaHealthyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HipaaHealthyTests/Pods-HipaaHealthyTests.release.xcconfig"; sourceTree = "<group>"; };
 		4064A507E78616614078C5BE /* Pods_HipaaHealthyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HipaaHealthyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4611800C1E40066600F4FCFC /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		4615EFF71E47B302005D46DB /* ResponseUserVerifyTokenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseUserVerifyTokenModel.swift; sourceTree = "<group>"; };
 		461734F71E43F0E200F6546E /* open-sans */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "open-sans"; path = "Fonts/open-sans"; sourceTree = "<group>"; };
 		461734FD1E43F47D00F6546E /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		464E90F31E46782E00648F66 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		464E90F51E46790C00648F66 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		464EDC271E3FF37D0043402B /* HipaaHealthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HipaaHealthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		464EDC2A1E3FF37D0043402B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		464EDC2C1E3FF37D0043402B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +167,14 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		464E90F01E46771800648F66 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				464E90F31E46782E00648F66 /* HomeViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
 		464EDC1E1E3FF37C0043402B = {
 			isa = PBXGroup;
 			children = (
@@ -227,8 +241,11 @@
 		4674A7811E3FF9BE005A8BB4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				464E90F51E46790C00648F66 /* Storyboard.swift */,
+				464EDC2E1E3FF37D0043402B /* Main.storyboard */,
 				461734F91E43F37700F6546E /* LaunchScreen */,
 				4674A7831E3FFA0D005A8BB4 /* Authentication */,
+				464E90F01E46771800648F66 /* Home */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -245,7 +262,6 @@
 		4674A7831E3FFA0D005A8BB4 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				464EDC2E1E3FF37D0043402B /* Main.storyboard */,
 				464EDC2C1E3FF37D0043402B /* LoginViewController.swift */,
 			);
 			name = Authentication;
@@ -322,6 +338,7 @@
 				469F5D1C1E40EB7100735C5A /* ResponseUserModel.swift */,
 				46996D781E40F4A000779076 /* ResponseResultsUserModel.swift */,
 				4698F8901E43248900F09A82 /* ResponseResultsUserPermissionUserModel.swift */,
+				4615EFF71E47B302005D46DB /* ResponseUserVerifyTokenModel.swift */,
 			);
 			name = "Authentication / User";
 			sourceTree = "<group>";
@@ -387,6 +404,7 @@
 				464EDC251E3FF37C0043402B /* Resources */,
 				264B515C7AC1E477572D7B3B /* [CP] Embed Pods Frameworks */,
 				1EFC4968C55468B6D9E9CA31 /* [CP] Copy Pods Resources */,
+				4646B7511E4899F00034791F /* Swift Lint */,
 			);
 			buildRules = (
 			);
@@ -592,6 +610,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HipaaHealthyUITests/Pods-HipaaHealthyUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4646B7511E4899F00034791F /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
+		};
 		734A0440CF910E5625F1418A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -659,17 +691,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4615EFF81E47B302005D46DB /* ResponseUserVerifyTokenModel.swift in Sources */,
 				4674A7941E4002C4005A8BB4 /* RoutingCoordinator.swift in Sources */,
 				4611800D1E40066600F4FCFC /* Routes.swift in Sources */,
 				464EDC2D1E3FF37D0043402B /* LoginViewController.swift in Sources */,
 				4698F8951E43489300F09A82 /* AuthenticationService.swift in Sources */,
 				46D3521A1E44CD6200EB8703 /* HHTextFieldLogin.swift in Sources */,
+				464E90F41E46782E00648F66 /* HomeViewController.swift in Sources */,
 				4698F8911E43248A00F09A82 /* ResponseResultsUserPermissionUserModel.swift in Sources */,
 				4674A78E1E400039005A8BB4 /* Request.swift in Sources */,
 				461734FE1E43F47E00F6546E /* UIImageView.swift in Sources */,
 				468CB3D21E463031009EA94D /* LoginViewModel.swift in Sources */,
 				4698F89A1E434C8500F09A82 /* CurrentUserModel.swift in Sources */,
 				464EDC2B1E3FF37D0043402B /* AppDelegate.swift in Sources */,
+				464E90F61E46790C00648F66 /* Storyboard.swift in Sources */,
 				4698F89D1E435B5200F09A82 /* UserModel.swift in Sources */,
 				4698F8981E434B0D00F09A82 /* ResponseUserLoginModel.swift in Sources */,
 				469F5D1D1E40EB7100735C5A /* ResponseUserModel.swift in Sources */,

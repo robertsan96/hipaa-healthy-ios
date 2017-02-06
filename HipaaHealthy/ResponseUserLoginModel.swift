@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-enum responseUserLoginModelState {
+enum ResponseUserLoginModelState {
     case initialState
     case didSetToken
     case didFail
@@ -20,7 +20,7 @@ class ResponseUserLoginModel: Mappable {
     var internalCode: String?
     var token: String?
     
-    var responseState: responseUserLoginModelState = .initialState
+    var responseState: ResponseUserLoginModelState = .initialState
     
     required init?(map: Map) { }
     

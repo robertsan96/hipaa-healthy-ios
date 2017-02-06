@@ -8,6 +8,7 @@ PODS:
     - RxSwift (~> 3.1)
   - RxSwift (3.1.0)
   - SwiftHEXColors (1.1.0)
+  - SwiftLint (0.16.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.3)
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
   - SwiftHEXColors
+  - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
@@ -23,7 +25,8 @@ SPEC CHECKSUMS:
   RxCocoa: 50d7564866da9299161e86a263ce12a0873904d8
   RxSwift: 83ff553e7593fdfdcb2562933a64c0284dffdadc
   SwiftHEXColors: 8f7e364df7929e32cff9f9eeb044bb215167d6be
+  SwiftLint: b8b683208cc09640898f16318a7a452274e91f61
 
-PODFILE CHECKSUM: 4eb232077bae93e0bc98b54af78cbb3ba84d17b0
+PODFILE CHECKSUM: 10c7f10ba98e9a5b71e6d5888ee2ddf6b0387052
 
 COCOAPODS: 1.2.0

@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-enum responseUserModelState {
+enum ResponseUserModelState {
     case initialState
     case didGetUser
     case didFail
@@ -19,7 +19,7 @@ class ResponseUserModel: Mappable {
     var internalCode: String?
     var results: ResponseResultsUserModel?
     
-    var responseState: responseUserModelState = .initialState
+    var responseState: ResponseUserModelState = .initialState
     
     init() { }
     
@@ -49,6 +49,5 @@ class ResponseUserModel: Mappable {
             self.responseState = .didFail
         }
     }
-    
     
 }
