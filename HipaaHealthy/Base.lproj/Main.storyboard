@@ -124,10 +124,16 @@
                             <constraint firstItem="p8J-cR-sGg" firstAttribute="top" secondItem="6Td-oa-bfi" secondAttribute="bottom" constant="120.5" id="khQ-Vl-ahd"/>
                             <constraint firstItem="wAw-Rb-N67" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="slh-XC-zCM"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="defaultTransition"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="FhN-Hm-gyx" appends="YES" id="5Dz-wn-dvM"/>
                         </connections>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="authBoxView" destination="wAw-Rb-N67" id="GRj-pr-ktQ"/>
                         <outlet property="emailTextField" destination="eBs-OA-tDf" id="oAO-qP-izL"/>
@@ -146,10 +152,10 @@
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Center View Controller-->
         <scene sceneID="4tf-MA-cBj">
             <objects>
-                <viewController storyboardIdentifier="homeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2OP-25-v9X" customClass="HomeViewController" customModule="HipaaHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="centerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2OP-25-v9X" customClass="CenterViewController" customModule="HipaaHealthy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dWe-Ib-5V7"/>
                         <viewControllerLayoutGuide type="bottom" id="QPR-hX-WgV"/>
@@ -164,14 +170,81 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="loginButton"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGD-NM-udb">
+                                <rect key="frame" x="90" y="352" width="195" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" backgroundImage="BlueButtonBackground">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pe-OR-C7a">
+                                <rect key="frame" x="75" y="215" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Toggle"/>
+                                <connections>
+                                    <action selector="toggleLeftPanelButton:" destination="2OP-25-v9X" eventType="touchUpInside" id="8Fq-0s-x4A"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="defaultTransition"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wV4-Wk-pFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="749"/>
+            <point key="canvasLocation" x="32.799999999999997" y="748.87556221889065"/>
+        </scene>
+        <!--Left Panel View Controller-->
+        <scene sceneID="rdC-W5-z5z">
+            <objects>
+                <viewController storyboardIdentifier="leftPanelViewController" id="xbu-cd-bsA" customClass="LeftPanelViewController" customModule="HipaaHealthy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rM8-WH-bFH"/>
+                        <viewControllerLayoutGuide type="bottom" id="gQS-Af-xwO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gt5-EV-XsI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="59V-OF-uyS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="zMB-mE-Mtf"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KLa-ud-uSo">
+                                <rect key="frame" x="0.0" y="153" width="375" height="514"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="KLa-ud-uSo" firstAttribute="centerX" secondItem="gt5-EV-XsI" secondAttribute="centerX" id="3z1-wj-UOx"/>
+                            <constraint firstItem="59V-OF-uyS" firstAttribute="leading" secondItem="gt5-EV-XsI" secondAttribute="leadingMargin" constant="-16" id="C1z-2G-r3V"/>
+                            <constraint firstItem="gQS-Af-xwO" firstAttribute="top" secondItem="KLa-ud-uSo" secondAttribute="bottom" id="DSQ-y8-Du4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KLa-ud-uSo" secondAttribute="trailing" constant="-16" id="EYs-ZP-d9r"/>
+                            <constraint firstItem="KLa-ud-uSo" firstAttribute="leading" secondItem="gt5-EV-XsI" secondAttribute="leadingMargin" constant="-16" id="diH-jt-QkI"/>
+                            <constraint firstItem="59V-OF-uyS" firstAttribute="top" secondItem="rM8-WH-bFH" secondAttribute="bottom" constant="-20" id="dzi-m3-qaV"/>
+                            <constraint firstItem="59V-OF-uyS" firstAttribute="centerX" secondItem="gt5-EV-XsI" secondAttribute="centerX" id="fJk-bU-Qwt"/>
+                            <constraint firstItem="KLa-ud-uSo" firstAttribute="top" secondItem="59V-OF-uyS" secondAttribute="bottom" constant="-2" id="mYG-NY-G3h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="59V-OF-uyS" secondAttribute="trailing" constant="-16" id="se6-FA-djy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="KLa-ud-uSo" id="tWp-yP-oBC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ja1-Xw-2bf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-623.20000000000005" y="748.87556221889065"/>
         </scene>
     </scenes>
     <resources>

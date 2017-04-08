@@ -7,8 +7,10 @@
 //
 
 import UIKit
+
 import Alamofire
 import RxSwift
+import Hero
 
 enum LoginViewControllerState {
     
@@ -39,21 +41,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let params: Parameters = [
-//            "email": "codecontrive@gmail.com",
-//            "password": "userx2"
-//        ]
-//        let _ = AuthenticationService().login(params: params).subscribe(onNext: { result in
-//            print("THE LOGIN WAS A SUCCESS: \(result)")
-//            print("WELCOME \(CurrentUser.shared.user?.firstName)")
-//
-//        })
-    
-//        let _ = AuthenticationService().verifyToken(token: "8ac1f93896bf0f7a3806320311a1b4d7e7945595")
-//            .subscribe(onNext: { valid in
-//                print("DECI TOKENUL E \(valid)")
-//            })
 
         self.controllerState.asObservable().subscribe(onNext: updatedControllerState).addDisposableTo(disposeBag)
         

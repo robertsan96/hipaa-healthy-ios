@@ -12,7 +12,9 @@
 		4615EFF81E47B302005D46DB /* ResponseUserVerifyTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615EFF71E47B302005D46DB /* ResponseUserVerifyTokenModel.swift */; };
 		461734F81E43F0E200F6546E /* open-sans in Resources */ = {isa = PBXBuildFile; fileRef = 461734F71E43F0E200F6546E /* open-sans */; };
 		461734FE1E43F47E00F6546E /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461734FD1E43F47D00F6546E /* UIImageView.swift */; };
-		464E90F41E46782E00648F66 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E90F31E46782E00648F66 /* HomeViewController.swift */; };
+		462317B81E4B538B00152CAA /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462317B71E4B538B00152CAA /* ContainerViewController.swift */; };
+		462317BC1E4B683B00152CAA /* LeftPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462317BB1E4B683B00152CAA /* LeftPanelViewController.swift */; };
+		464E90F41E46782E00648F66 /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E90F31E46782E00648F66 /* CenterViewController.swift */; };
 		464E90F61E46790C00648F66 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E90F51E46790C00648F66 /* Storyboard.swift */; };
 		464EDC2B1E3FF37D0043402B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464EDC2A1E3FF37D0043402B /* AppDelegate.swift */; };
 		464EDC2D1E3FF37D0043402B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464EDC2C1E3FF37D0043402B /* LoginViewController.swift */; };
@@ -65,7 +67,9 @@
 		4615EFF71E47B302005D46DB /* ResponseUserVerifyTokenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseUserVerifyTokenModel.swift; sourceTree = "<group>"; };
 		461734F71E43F0E200F6546E /* open-sans */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "open-sans"; path = "Fonts/open-sans"; sourceTree = "<group>"; };
 		461734FD1E43F47D00F6546E /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		464E90F31E46782E00648F66 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		462317B71E4B538B00152CAA /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		462317BB1E4B683B00152CAA /* LeftPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftPanelViewController.swift; sourceTree = "<group>"; };
+		464E90F31E46782E00648F66 /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		464E90F51E46790C00648F66 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		464EDC271E3FF37D0043402B /* HipaaHealthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HipaaHealthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		464EDC2A1E3FF37D0043402B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -170,7 +174,9 @@
 		464E90F01E46771800648F66 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				464E90F31E46782E00648F66 /* HomeViewController.swift */,
+				464E90F31E46782E00648F66 /* CenterViewController.swift */,
+				462317B71E4B538B00152CAA /* ContainerViewController.swift */,
+				462317BB1E4B683B00152CAA /* LeftPanelViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -470,6 +476,7 @@
 					464EDC261E3FF37C0043402B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = FZSAPS42SZ;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					464EDC3A1E3FF37D0043402B = {
@@ -697,14 +704,16 @@
 				464EDC2D1E3FF37D0043402B /* LoginViewController.swift in Sources */,
 				4698F8951E43489300F09A82 /* AuthenticationService.swift in Sources */,
 				46D3521A1E44CD6200EB8703 /* HHTextFieldLogin.swift in Sources */,
-				464E90F41E46782E00648F66 /* HomeViewController.swift in Sources */,
+				464E90F41E46782E00648F66 /* CenterViewController.swift in Sources */,
 				4698F8911E43248A00F09A82 /* ResponseResultsUserPermissionUserModel.swift in Sources */,
 				4674A78E1E400039005A8BB4 /* Request.swift in Sources */,
 				461734FE1E43F47E00F6546E /* UIImageView.swift in Sources */,
+				462317B81E4B538B00152CAA /* ContainerViewController.swift in Sources */,
 				468CB3D21E463031009EA94D /* LoginViewModel.swift in Sources */,
 				4698F89A1E434C8500F09A82 /* CurrentUserModel.swift in Sources */,
 				464EDC2B1E3FF37D0043402B /* AppDelegate.swift in Sources */,
 				464E90F61E46790C00648F66 /* Storyboard.swift in Sources */,
+				462317BC1E4B683B00152CAA /* LeftPanelViewController.swift in Sources */,
 				4698F89D1E435B5200F09A82 /* UserModel.swift in Sources */,
 				4698F8981E434B0D00F09A82 /* ResponseUserLoginModel.swift in Sources */,
 				469F5D1D1E40EB7100735C5A /* ResponseUserModel.swift in Sources */,
@@ -866,13 +875,14 @@
 			baseConfigurationReference = 8A455CF00944353DE5E1147B /* Pods-HipaaHealthy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = FZSAPS42SZ;
 				INFOPLIST_FILE = HipaaHealthy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CMD-P.HipaaHealthy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -882,6 +892,7 @@
 			baseConfigurationReference = 51CDA0E0ACCB0026E9BB65DB /* Pods-HipaaHealthy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = FZSAPS42SZ;
 				INFOPLIST_FILE = HipaaHealthy/Info.plist;

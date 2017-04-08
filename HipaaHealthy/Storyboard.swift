@@ -25,14 +25,26 @@ struct Storyboard {
         }
     }
     
-    struct Home {
+    struct Layout {
         
-        static func homeViewController() -> HomeViewController {
+        static func centerViewController() -> CenterViewController {
             let storyboardName = "Main"
-            let viewControllerId = "homeViewController"
+            let viewControllerId = "centerViewController"
             
             let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
-            if let vc = storyboard.instantiateViewController(withIdentifier: viewControllerId) as? HomeViewController {
+            if let vc = storyboard.instantiateViewController(withIdentifier: viewControllerId) as? CenterViewController {
+                return vc
+            } else {
+                fatalError("Unable to instantiate view controller \(viewControllerId) from \(storyboardName) storyboard.")
+            }
+        }
+        
+        static func leftPanelViewController() -> LeftPanelViewController {
+            let storyboardName = "Main"
+            let viewControllerId = "leftPanelViewController"
+            
+            let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+            if let vc = storyboard.instantiateViewController(withIdentifier: viewControllerId) as? LeftPanelViewController {
                 return vc
             } else {
                 fatalError("Unable to instantiate view controller \(viewControllerId) from \(storyboardName) storyboard.")

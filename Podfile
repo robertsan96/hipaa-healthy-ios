@@ -13,6 +13,7 @@ target 'HipaaHealthy' do
   pod 'AlamofireObjectMapper', '~> 4.0'
   pod 'SwiftHEXColors'
   pod 'SwiftLint'
+  pod 'Hero'
 
   target 'HipaaHealthyTests' do
     inherit! :search_paths

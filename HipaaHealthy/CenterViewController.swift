@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  CenterViewController.swift
 //  HipaaHealthy
 //
 //  Created by Robert Sandru on 2/4/17.
@@ -8,9 +8,14 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+protocol CenterViewControllerDelegate: class {
+    
+    func toggleLeftPanel()
+}
 
-    let defaultValue = "pula"
+class CenterViewController: UIViewController {
+
+    weak var delegate: CenterViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +28,9 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func toggleLeftPanelButton(_ sender: Any) {
+        self.delegate?.toggleLeftPanel()
+    }
     /*
     // MARK: - Navigation
 

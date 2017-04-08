@@ -34,9 +34,18 @@ class App {
     }
 
     func startApp() {
+//        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+//        let initialViewController = Storyboard.Authentication.loginViewController()
+//        initialViewController.delegate = self
+//        appDelegate?.window = UIWindow(frame: UIScreen.main.bounds)
+//        appDelegate?.window?.rootViewController = initialViewController
+//        appDelegate?.window?.makeKeyAndVisible()
+//        
+//        self.rootViewController = appDelegate?
+//            .window?.rootViewController
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        let initialViewController = Storyboard.Authentication.loginViewController()
-        initialViewController.delegate = self
+        let initialViewController = ContainerViewController()
+        
         appDelegate?.window = UIWindow(frame: UIScreen.main.bounds)
         appDelegate?.window?.rootViewController = initialViewController
         appDelegate?.window?.makeKeyAndVisible()
@@ -50,7 +59,8 @@ class App {
     }
     
     func showHome() {
-        let vc = Storyboard.Home.homeViewController()
+        let vc = Storyboard.Layout.centerViewController()
+        
         self.rootViewController?.show(vc, sender: nil)
     }
     
@@ -66,8 +76,8 @@ class App {
 extension App: LoginViewControllerDelegate {
     
     func loginViewControllerDidLogin(viewController: LoginViewController) {
-       showHome()
         
+       showHome()
     }
     
     func loginViewControllerDidFailLogin(viewController: LoginViewController) { }
@@ -78,7 +88,6 @@ extension App: CurrentUserModelDelegate {
     func currentUserModelDelegateLoggedIn(model: CurrentUserModel) { }
     
     func currentUserModelDelegateLoggedOut(model: CurrentUserModel) {
-        print("logged out")
         showLogin()
     }
 }

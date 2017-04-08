@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Hero.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,17 +57,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0C7DD25C7B51E29BB9428F0ACBAA4876</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>1CE919DB448EE67CA0C0F51CD077DCC2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>26A084ECCB67BDEB0110C72DCF277CE5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +67,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3C53BDE0FA2D46A6A29706C57DE7D8A6</key>
+		<key>35E260D400A9E934B87FAD0AC540E5B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>52677F8900B4E620A311F2031DCA95A6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7DBE0A18E7F649CAF5216068334B4F95</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F01DC842BBE6E9F04C0A995FD646D54C</key>
+		<key>AFE65A8E20384110D50E72675875A3F0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CBC08580AE5A802626154E0BCABF642B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -42,7 +42,6 @@ class AuthenticationService {
             })
             return Disposables.create {
                 sendRequest.dispose()
-                print("did dispose login")
             }
         }
     }
@@ -76,7 +75,6 @@ class AuthenticationService {
             })
             return Disposables.create {
                 sendRequest.dispose()
-                print("did dispose getUser")
             }
         }
     }
@@ -111,7 +109,6 @@ class AuthenticationService {
             })
             return Disposables.create {
                 sendRequest.dispose()
-                print("did dispose verifyToken")
             }
         }
     }
